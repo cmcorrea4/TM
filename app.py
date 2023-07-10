@@ -19,7 +19,7 @@ if img_file_buffer is not None:
     cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
 
     size = (224, 224)
-    imag2 = ImagOps.fit(cv2_img, size, Imag.ANTIALIAS)
+    imag2 = ImagOps.fit(cv2_img, size)
 
     #turn the image into a numpy array
     image_array = np.asarray(imag2)

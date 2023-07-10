@@ -18,10 +18,10 @@ if img_file_buffer is not None:
    #To read image file buffer as a PIL Image:
     img = Image.open(img_file_buffer)
 
+    newsize = (224, 224)
+    img = img.resize(newsize)
     # To convert PIL Image to numpy array:
     img_array = np.array(img)
-
-    size = (224, 224)
 
     # Normalize the image
     normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1

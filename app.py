@@ -32,6 +32,6 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][0]>0.5:
-      st.write('Carlos sin saludar: '+str( prediction[0][0]) )
+      st.header('Carlos sin saludar, con Probabilidad: '+str( prediction[0][0]) )
     if prediction[0][1]>0.5:
-      st.write('Carlos Saludando: '+str( prediction[0][1]))
+      st.header('Carlos Saludando, con Probabilidad: '+str( prediction[0][1]))

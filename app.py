@@ -9,7 +9,7 @@ model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 st.title("Reconocimiento de Imágenes")
-st.write("Versión de Python:", platform.python_version())
+#st.write("Versión de Python:", platform.python_version())
 image = Image.open('OIG5.jpg')
 st.image(image, width=350)
 with st.sidebar:

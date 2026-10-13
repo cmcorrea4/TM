@@ -18,8 +18,11 @@ st.title("Reconocimiento de Imágenes")
 #image = Image.open('OIG5.jpg')
 #st.image(image, width=350)
 
-img_portada = Image.open("OIG5.jpg").convert("RGB")
-st.image(img_portada, width=350)
+import base64
+
+with open("OIG5.jpg", "rb") as f:
+    b64 = base64.b64encode(f.read()).decode()
+st.html(f'<img src="data:image/jpeg;base64,{b64}" width="350">')
 
 
 with st.sidebar:
